@@ -1,3 +1,4 @@
+ARG REACT_APP_AUTH_PRD
 FROM node:12.16.0 as build
 WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
