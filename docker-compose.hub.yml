@@ -1,0 +1,14 @@
+version: '3'
+services:
+  client:
+    image: shehinshaji/react-app:latest
+    container_name: client
+    volumes:
+      - /usr/src/app/node_modules
+      - /usr/src/app/build
+    env_file:
+      - ./environment/env.production
+    pull_policy: always
+    ports:
+      - "8080:80"
+
