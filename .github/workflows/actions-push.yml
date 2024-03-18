@@ -29,6 +29,8 @@ jobs:
         with:
           context: .
           file: ./dockers/Dockerfile.prod
+          build-args: |
+            REACT_APP_AUTH_PRD=${{ REACT_APP_AUTH_PRD }}
           push: true
           platforms: |
             linux/amd64
